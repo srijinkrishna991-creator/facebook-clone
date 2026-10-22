@@ -1,0 +1,131 @@
+
+/* Basic settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background: #f0f2f5;
+    --card: #ffffff;
+    --text: #1c1e21;
+    --border: #dddddd;
+    --blue: #1877f2;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Navigation bar */
+.navbar {
+    background: var(--card);
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+}
+
+.navbar h1 {
+    color: var(--blue);
+    font-size: 30px;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Dark mode button */
+#themeToggle {
+    background: var(--background);
+    color: var(--text);
+}
+
+/* News feed */
+.feed {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 0 15px;
+}
+
+.feed h2 {
+    margin-bottom: 20px;
+}
+
+/* Post cards */
+.post {
+    background: var(--card);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+.post h3 {
+    margin-bottom: 5px;
+}
+
+.time {
+    color: #888888;
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+
+.post p:not(.time) {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Like, Comment and Share */
+.actions {
+    display: flex;
+    gap: 10px;
+    border-top: 1px solid var(--border);
+    padding-top: 12px;
+}
+
+.actions button {
+    background: var(--background);
+    color: var(--text);
+    flex: 1;
+}
+
+.actions button:hover {
+    background: #dce7f7;
+}
+
+/* Dark theme */
+body.dark {
+    --background: #18191a;
+    --card: #242526;
+    --text: #e4e6eb;
+    --border: #3e4042;
+    --blue: #4599ff;
+}
+
+/* Mobile layout */
+@media (max-width: 600px) {
+    .navbar {
+        padding: 12px 15px;
+    }
+
+    .navbar h1 {
+        font-size: 24px;
+    }
+
+    .feed {
+        margin-top: 20px;
+    }
+}
